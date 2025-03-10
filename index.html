@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivet Riot - Handcrafted Leather Goods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a {
+            color: #f4f4f4;
+            margin: 5px 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+            padding: 10px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 1.8em;
+        }
+        .content {
+            padding: 20px;
+        }
+        .portfolio-container {
+            position: relative;
+        }
+        .portfolio {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            scroll-snap-type: x mandatory;
+            padding: 10px 0;
+        }
+        .portfolio img {
+            width: 400px;
+            height: auto;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            object-position: center;
+            border: 2px solid #555;
+            border-radius: 8px;
+            cursor: pointer;
+            scroll-snap-align: center;
+        }
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .scroll-btn.left {
+            left: 0;
+        }
+        .scroll-btn.right {
+            right: 0;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+            color: #aaa;
+        }
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 1.4em;
+            }
+            nav a {
+                margin: 5px;
+            }
+        }
+        .divider {
+        width: 100%;
+        height: 50px;
+        background: url('path/to/your-divider.svg') no-repeat center center;
+        background-size: cover;
+    }
+    .location-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    flex: 1;
+}
+.location-sections-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.location-section h3 {
+    margin-top: 0;
+    color: #f4f4f4;
+}
+
+.location-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.location-section ul li {
+    margin: 5px 0;
+}
+
+.location-section a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.location-section a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #555;
+    margin: 20px 0;
+}
+@media (max-width: 800px) {
+    .location-sections-container {
+        flex-direction: column;
+    }
+}
+    </style>
+    <script>
+        function openOverlay(src) {
+            document.getElementById('overlay-img').src = src;
+            document.getElementById('overlay').style.display = 'flex';
+        }
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+        function scrollPortfolio(direction) {
+            const container = document.querySelector('.portfolio');
+            const scrollAmount = 200;
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Rivet Riot</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+        <a href="#location">Where to Find Us</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Handcrafted Leather Goods Built to Last</h2>
+</section>
+
+<section id="about" class="content">
+    <h2>About Rivet Riot</h2>
+    <p>I started making leather accessories because affordable, high-quality leather goods were hard to find. Mass-produced items broke after just a few wears. Rivet Riot is my answer—handcrafted, punk-inspired leather goods built to withstand anything. Sustainability and local craftsmanship are at the core of everything I do.</p>
+</section>
+
+<section id="portfolio" class="content">
+    <h2>Portfolio</h2>
+    <div class="portfolio-container">
+        <div class="portfolio">
+            <img src="photos/CuffsOnLog1.jpg" alt="Leather Cuffs" onclick="openOverlay(this.src)">
+            <img src="photos/LockingChoker3.jpg" alt="Leather Choker with Chain" onclick="openOverlay(this.src)">
+            <img src="photos/SpikedChoker2.jpg" alt="Leather Belt 1" onclick="openOverlay(this.src)">
+            <img src="photos/SpikedHarness2.jpg" alt="Leather Wallet 1" onclick="openOverlay(this.src)">
+            <img src="photos/DogCollar.jpg" alt="DogCollar" onclick="openOverlay(this.src)">
+        </div>
+    </div>
+</section>
+
+<section id="location" class="content">
+    <h2>Where to Find Us</h2>
+    <div class="location-sections-container">
+        <!-- Cobb Antique Mall Section -->
+        <div class="location-section">
+            <h3>Cobb Antique Mall</h3>
+            <p><strong>Address:</strong> 2800 Canton Rd., Marietta, GA 30066</p>
+            <p><strong>Phone:</strong> 770-590-8989</p>
+            <p><strong>Hours of Operation:</strong></p>
+            <ul>
+                <li>Monday – Saturday: 10:00 AM – 6:00 PM</li>
+                <li>Sunday: 12:00 PM – 6:00 PM</li>
+            </ul>
+            <p>For more information, visit the Cobb Antique Mall's official website: <a href="https://cobbantiques.com/">cobbantiques.com</a></p>
+        </div>
+        <hr>
+        <!-- Craft Fairs and Events Section -->
+        <div class="location-section">
+            <h3>Craft Fairs and Other Events</h3>
+            <h4>Lavonia Renaissance Festival</h4>
+            <p><strong>Where:</strong> Lavonia City Park, Lavonia, GA</p>
+            <p><strong>When:</strong> May 3rd, 10:00 AM – 5:00 PM</p>
+            <p><strong>Admission:</strong> $10 adults, $5 students, 5 & under FREE</p>
+            <p>For more details, visit the official event page: <a href="https://www.lavoniadowntown.com/renassiance-festival">Lavonia Renaissance Festival</a></p>
+        </div>
+    </div>
+</section>
+
+<div id="overlay" class="overlay" onclick="closeOverlay()">
+    <img id="overlay-img" src="" alt="Expanded View">
+</div>
+
+</body>
+</html>
