@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commission Request - Rivet Riot</title>
+    <title>Rivet Riot - Handcrafted Leather Goods</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #111;
+            color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 8px;
+            border: 2px solid #444;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: calc(97%);
+            padding: 10px;
+            margin-bottom: 15px;
+            margin-right: 20px;
+            border-radius: 4px;
+            border: 1px solid #555;
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #444;
+            color: #f4f4f4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #666;
+        }
+        .pricing {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 8px;
+            border: 2px solid #444;
+        }
+        .pricing h3 {
+            text-align: center;
+        }
+        .pricing ul {
+            list-style: none;
+            padding: 0;
+        }
+        .pricing li {
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+  <a href="./index.html"><img src="photos/RivetRiot_transparent.png" height="150"></a>
+</header>
+
+<section id="pricing" class="pricing">
+    <h3>Information</h3>
+    <ul>
+        <li>Prices may vary depending on materials, design complexity, and customization details. All pricing will be discussed beforehand. </li>
+        <li>Payment is due 30% up front and 70% upon delivery. pieces can be picked up at the antique mall at no cost or shipped at the buyer's expense. </li>
+        <li>All rules have exceptions and I will work with your circumstances.</li>
+        <li>Commissions should be built in 3-5 business days with updates provided if requested.</li>
+    </ul>
+</section>
+
+<section id="pricing" class="pricing">
+    <h3>Pricing Guide</h3>
+    <ul>
+        <li>Custom Cuffs: Starting at $25</li>
+        <li>Chokers: Starting at $45</li>
+        <li>Notebooks: Starting at $30</li>
+        <li>Harnesses: Starting at $75</li>
+        <li>Patches: Starting at $5</li>
+        <li>Custom Requests: Priced individually based on complexity</li>
+    </ul>
+</section>
+
+<section id="contact" class="content">
+  <h2>Commission Form</h2>
+  <form action="https://formspree.io/f/your-form-id" method="POST" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    <label for="description">Commission Description:</label><br>
+    <textarea id="description" name="description" rows="5" placeholder="Describe your custom request in detail." required></textarea>
+    <br><br>
+    <label for="reference">Reference Images (optional):</label>
+    <input type="file" id="reference" name="attachment" accept="image/*">
+    <br><br>
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
+    <button type="submit">Submit Request</button>
+</form>
+</section>
+
+</body>
+</html>
