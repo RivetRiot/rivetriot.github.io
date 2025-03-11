@@ -16,15 +16,118 @@
             document.getElementById('overlay').style.display = 'none';
         }
     </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav a, .fancya {
+            color: #f4f4f4;
+            margin: 5px 10px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            border: 2px solid #666;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        nav a:hover, .fancya:hover {
+            background-color: #666;
+            border-color: #888;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .portfolio-container {
+            overflow-x: auto;
+        }
+        .portfolio {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 15px;
+            padding: 10px 0;
+        }
+        .portfolio img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border: 2px solid #555;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .location-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .location {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .location h3 {
+            margin-top: 0;
+        }
+        .location ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .location ul li {
+            margin-bottom: 5px;
+        }
+        .location a {
+            color: #f4f4f4;
+            text-decoration: none;
+        }
+        .location a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
 <header>
     <a href="./index.html"><img src="photos/RivetRiot_transparent.png" height="150"></a>
     <nav>
-        <a href="./commisionform.html">Prices and Commissions</a>
+        <a href="./commisionform.html">Commissions</a>
         <a href="#contact">Contact</a>
-        <a href="#location">Where to Find Us</a>
+        <a href="#location">Find us in person</a>
+        <a href="./products.html">Products</a>
     </nav>
 </header>
 
@@ -36,50 +139,40 @@
 <section id="about" class="content">
     <h2>About Rivet Riot</h2>
     <p>I started making leather accessories because affordable, high-quality leather goods were hard to find. Mass-produced items broke after just a few wears. Rivet Riot is my answer—handcrafted, punk-inspired leather goods built to withstand anything. Sustainability and local craftsmanship are at the core of everything I do.</p>
-</section>
 
-<section id="portfolio" class="content">
-    <h2>Portfolio</h2>
     <div class="portfolio-container">
         <div class="portfolio">
             <img src="photos/CuffsOnLog1.jpg" alt="Leather Cuffs" onclick="openOverlay(this.src)">
             <img src="photos/LockingChoker3.jpg" alt="Leather Choker with Chain" onclick="openOverlay(this.src)">
-            <img src="photos/SpikedChoker2.jpg" alt="Leather Belt 1" onclick="openOverlay(this.src)">
-            <img src="photos/SpikedHarness2.jpg" alt="Leather Wallet 1" onclick="openOverlay(this.src)">
-            <img src="photos/DogCollar.jpg" alt="DogCollar" onclick="openOverlay(this.src)">
+            <img src="photos/SpikedChoker2.jpg" alt="Leather Belt" onclick="openOverlay(this.src)">
+            <img src="photos/SpikedHarness2.jpg" alt="Leather Wallet" onclick="openOverlay(this.src)">
+            <img src="photos/DogCollar.jpg" alt="Dog Collar" onclick="openOverlay(this.src)">
+            <img src="photos/REALLYspikeychoker.jpg" alt="Leather Wallet" onclick="openOverlay(this.src)">
+            <img src="photos/interestingchokermarch.png" alt="Dog Collar" onclick="openOverlay(this.src)">
         </div>
     </div>
 </section>
 
 <section id="contact" class="content">
     <h2>Contact</h2>
-    <p>Email us at <a href="mailto:rivetriotleather@gmail.com">rivetriotleather@gmail.com</a> or follow us on <a href="https://www.instagram.com/rivetriot/">instagram</a> for the latest updates.</p>
-    <h3>Commission a piece</h3>
-    <a class="fancya" href="./commisionform.html">Prices and Commissions</a>
-
+    <div class="location">
+        <p>Email us at <a href="mailto:rivetriotleather@gmail.com">rivetriotleather@gmail.com</a></p>
+        <p>Follow us on Instagram at <a href="https://www.instagram.com/rivetriot/">@rivetriot</a></p>
+    </div>
 </section>
 
 <section id="location" class="content">
-    <h2>Where to Find Us</h2>
+    <h2>Find Us In Person</h2>
     <div class="location-container">
         <div class="location">
             <h3>Cobb Antique Mall</h3>
             <p><strong>Address:</strong> 2800 Canton Rd., Marietta, GA 30066</p>
-            <p><strong>Phone:</strong> 770-590-8989</p>
-            <p><strong>Hours of Operation:</strong></p>
-            <ul>
-                <li>Monday – Saturday: 10:00 AM – 6:00 PM</li>
-                <li>Sunday: 12:00 PM – 6:00 PM</li>
-            </ul>
-            <p>For more information, visit the Cobb Antique Mall's official website: <a href="https://cobbantiques.com/">cobbantiques.com</a></p>
+            <p><strong>Hours:</strong> Mon–Sat: 10–6, Sun: 12–6</p>
         </div>
         <div class="location">
             <h3>Lavonia Renaissance Festival</h3>
-            <p><strong>Location:</strong> Lavonia City Park, 12221 Augusta Rd., Lavonia, GA 30553</p>
-            <p><strong>Date:</strong> May 3, 2025</p>
-            <p><strong>Time:</strong> 10:00 AM – 5:00 PM</p>
-            <p><strong>Admission:</strong> $10 adults, $5 students, 5 & under FREE</p>
-            <p>For more details, visit the Lavonia Downtown Development Authority's website: <a href="https://www.lavoniadowntown.com/renassiance-festival">lavoniadowntown.com</a></p>
+            <p><strong>Date:</strong> May 3, 2025, 10 AM – 5 PM</p>
+            <p><strong>Location:</strong> Lavonia City Park, GA</p>
         </div>
     </div>
 </section>
