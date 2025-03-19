@@ -6,118 +6,7 @@
     <title>Rivet Riot - Handcrafted Leather Goods</title>
 
     <link rel="stylesheet" href="styles.css">
-
-    <script>
-        function openOverlay(src) {
-            document.getElementById('overlay-img').src = src;
-            document.getElementById('overlay').style.display = 'flex';
-        }
-        function closeOverlay() {
-            document.getElementById('overlay').style.display = 'none';
-        }
-    </script>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #111;
-            color: #f4f4f4;
-        }
-        header {
-            background-color: #222;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        nav a, .fancya {
-            color: #f4f4f4;
-            margin: 5px 10px;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px 20px;
-            background-color: #444;
-            border-radius: 5px;
-            border: 2px solid #666;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-        nav a:hover, .fancya:hover {
-            background-color: #666;
-            border-color: #888;
-        }
-        .content {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        .portfolio-container {
-            overflow-x: auto;
-        }
-        .portfolio {
-            display: grid;
-            grid-auto-flow: column;
-            grid-template-rows: repeat(2, 1fr);
-            gap: 15px;
-            padding: 10px 0;
-        }
-        .portfolio img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border: 2px solid #555;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
-        }
-        .overlay img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-        }
-        .location-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .location {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .location h3 {
-            margin-top: 0;
-        }
-        .location ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .location ul li {
-            margin-bottom: 5px;
-        }
-        .location a {
-            color: #f4f4f4;
-            text-decoration: none;
-        }
-        .location a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <script src="photoOverlay.js"></script>
 </head>
 <body>
 
@@ -141,7 +30,7 @@
     <p>I started making leather accessories because affordable, high-quality leather goods were hard to find. Mass-produced items broke after just a few wears. Rivet Riot is my answer—handcrafted, punk-inspired leather goods built to withstand anything. Sustainability and local craftsmanship are at the core of everything I do.</p>
 
     <div class="portfolio-container">
-        <div class="portfolio">
+        <div class="portfolio" style="grid-template-rows: repeat(2, 1fr);">
             <img src="photos/CuffsOnLog1.jpg" alt="Leather Cuffs" onclick="openOverlay(this.src)">
             <img src="photos/LockingChoker3.jpg" alt="Leather Choker with Chain" onclick="openOverlay(this.src)">
             <img src="photos/SpikedChoker2.jpg" alt="Leather Belt" onclick="openOverlay(this.src)">
@@ -155,37 +44,37 @@
 
 <section id="contact" class="content">
     <h2>Contact</h2>
-    <div class="location">
+    <div class="box">
         <p>Email us at <a href="mailto:rivetriotleather@gmail.com">rivetriotleather@gmail.com</a></p>
         <p>Follow us on Instagram at <a href="https://www.instagram.com/rivetriot/">@rivetriot</a></p>
     </div>
 </section>
 
-<section id="location" class="content">
+<section id="Location" class="content">
     <h2>Find Us In Person</h2>
-    <div class="location-container">
-        <div class="location">
+    <div class="box-container">
+        <div class="box">
             <h3>Cobb Antique Mall</h3>
             <p><strong>Address:</strong> 2800 Canton Rd., Marietta, GA 30066</p>
             <p><strong>Hours:</strong> Mon–Sat: 10–6, Sun: 12–6</p>
             <a class="fancya" target="_blank" style="margin-left:0px" 
             href="https://cobbantiques.com/">More Info</a>
         </div>
-        <div class="location">
+        <div class="box">
             <h3>Sip & Stroll at Galleria</h3>
             <p><strong>Date:</strong> April 2nd, 2025, 3pm - 6pm</p>
             <p><strong>Location:</strong>Cobb Galleria<br>2 Galleria Pkwy SE, Atlanta, GA 30339 (Cumberland, Near Truist Park)</p>
             <a class="fancya" target="_blank" style="margin-left:0px" 
             href="https://www.eventeny.com/events/sip-stroll-at-galleria-april-2nd-2025-18656/">More Info</a>
         </div>
-        <div class="location">
+        <div class="box">
             <h3>Midweek Market at Perimeter Summit</h3>
             <p><strong>Date:</strong> April 24th, 11am - 3pm</p>
             <p><strong>Location:</strong>Perimeter Summit<br>10 Perimeter Summit Blvd, Atlanta, GA(Sandy Springs)</p>
             <a class="fancya" target="_blank" style="margin-left:0px" 
             href="https://www.eventeny.com/events/midweek-market-at-perimeter-summit-april-24th-2025-18910/">More Info</a>
         </div>
-        <div class="location">
+        <div class="box">
             <h3>Lavonia Renaissance Festival</h3>
             <p><strong>Date:</strong> May 3, 2025, 10 AM – 5 PM</p>
             <p><strong>Location:</strong> Lavonia City Park<br>12221 Augusta Rd, Lavonia, GA</p>

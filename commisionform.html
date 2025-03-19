@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commission Request - Rivet Riot</title>
     <title>Rivet Riot - Handcrafted Leather Goods</title>
-
+    <script src="photoOverlay.js"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #111;
-            color: #f4f4f4;
-        }
-        h2 {
-            text-align: center;
-        }
         form {
             max-width: 600px;
             margin: 0 auto;
@@ -54,25 +44,6 @@
         button:hover {
             background-color: #666;
         }
-        .pricing {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #222;
-            border-radius: 8px;
-            border: 2px solid #444;
-        }
-        .pricing h3 {
-            text-align: center;
-        }
-        .pricing ul {
-            list-style: none;
-            padding: 0;
-        }
-        .pricing li {
-            padding: 8px 0;
-            border-bottom: 1px solid #444;
-        }
     </style>
 </head>
 <body>
@@ -82,26 +53,33 @@
   <a href="./index.html"><img src="photos/RivetRiot_transparent.png" height="150"></a>
 </header>
 
-<section id="pricing" class="pricing">
-    <h3>Information</h3>
-    <ul>
-        <li>Prices may vary depending on materials, design complexity, and customization details. All pricing will be discussed beforehand. </li>
-        <li>Payment is due 30% up front and 70% upon delivery. pieces can be picked up at the antique mall at no cost or shipped at the buyer's expense. </li>
-        <li>Commissions should be built in 3-5 business days with updates provided if requested.</li>
-        <p>All rules have exceptions and I will work with your circumstances.</p>
-    </ul>
-</section>
+<center>
+<div class="box-container">
+  <div class="box" id="list-box">
+      <h3>Information</h3>
+      <ul>
+          <li>Prices may vary depending on materials, design complexity, and customization details. All pricing will be discussed beforehand. </li>
+          <li>Payment for pieces over $50 is due 30% up front and 70% upon delivery. Cheaper pieces are 100% at completion. pieces can be picked up at the antique mall at no cost or shipped at the buyer's expense. (usually around $11 USPS priority mail) </li>
+          <li>Commissions should be built in 3-5 business days with updates provided if requested.</li>
+          <p>All rules have exceptions and I will work with your circumstances.</p>
+      </ul>
+    </div>
+  </div>
 
-<section id="pricing" class="pricing">
-    <h3>Pricing Guide</h3>
-    <ul>
-        <li>Custom Cuffs: Starting at $12 sm. / $25 med.</li>
-        <li>Chokers: Starting at $35 sm. / $45 med.</li>
-        <li>Notebook covers: Starting at $30</li>
-        <li>Custom Requests: Priced individually based on complexity</li>
-    </ul>
-    <p>More info: <a class="fancya" href="./products.html">product page</a></CENTER></p>
-</section>
+  <div class="box"id="list-box">
+      <h3>Pricing Guide</h3>
+      <ul>
+          <li>Custom Cuffs: Starting at $12 sm. / $25 med.</li>
+          <li>Chokers: Starting at $35 sm. / $45 med.</li>
+          <li>Notebook covers: Starting at $30</li>
+          <li>Custom Requests: Priced individually based on complexity</li>
+      </ul>
+      <p>More info: <a class="fancya" href="./products.html">product page</a></CENTER></p>
+    </div>
+  </div>
+</div>
+</center>
+
 
 <section id="contact" class="content">
   <h2>Commission Form</h2>

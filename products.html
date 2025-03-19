@@ -5,88 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rivet Riot - Handcrafted Leather Goods</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #000;
-        }
-        header img {
-            max-height: 150px;
-        }
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #2a2a2a;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            border-radius: 8px;
-        }
-        h1, h2 {
-            text-align: center;
-            color: #fff;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .content {
-            margin-bottom: 40px;
-        }
-        .portfolio-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .portfolio img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-        }
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-        #overlay-img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 8px;
-        }
-        a {
-            color: #4a90e2;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-    <script>
-        function openOverlay(src) {
-            document.getElementById('overlay-img').src = src;
-            document.getElementById('overlay').style.display = 'flex';
-        }
-        function closeOverlay() {
-            document.getElementById('overlay').style.display = 'none';
-        }
-    </script>
+    <script src="photoOverlay.js"></script>
 </head>
 
 <body>
@@ -94,7 +13,9 @@
         <a href="./index.html"><img src="photos/RivetRiot_transparent.png" alt="Rivet Riot Logo"></a>
     </header>
 
-    <main>
+    <center>
+    <div class="box-container">
+        <div class="box">
         <h1>Leather Products</h1>
         <p>
             Every piece is handcrafted from high-quality, 5oz leather, carefully measured, cut, and hand-dyed to ensure durability and a unique finish. Each item is finished with bee's wax for added protection, enhancing both longevity and character. Sturdy hardware is securely added, creating pieces designed for long-lasting wear. Whether you're choosing from existing designs or customizing your own, every product is crafted with attention to detail and built to endure.
@@ -112,6 +33,9 @@
                 <div class="portfolio">
                     <img src="photos/CuffsOnLog1.jpg" alt="Leather Cuffs" onclick="openOverlay(this.src)">
                     <img src="photos/CuffsOnLog2.jpg" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
+                    <img src="photos/cuffPile.png" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
+                    <img src="photos/2tierCuff.png" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
+                    <img src="photos/IndividualCuff1.png" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
                 </div>
             </div>
         </section>
@@ -127,6 +51,10 @@
                     <img src="photos/LockingChoker3.jpg" alt="Leather Choker with Chain" onclick="openOverlay(this.src)">
                     <img src="photos/interestingchokermarch.png" alt="Leather Choker" onclick="openOverlay(this.src)">
                     <img src="photos/REALLYspikeychoker.jpg" alt="Leather Choker with Chain" onclick="openOverlay(this.src)">
+                    <img src="photos/SpikeyCollarLilith.png" alt="Leather Choker with Chain" onclick="openOverlay(this.src)">
+                    <img src="photos/PinkCuteChoker1.png" alt="Leather Choker with Chain" onclick="openOverlay(this.src)">
+                    <img src="photos/doorstopChokerPink.png" alt="Leather Choker with Chain" onclick="openOverlay(this.src)">    
+                    <img src="photos/BrownChoker.png" alt="Leather Choker with Chain" onclick="openOverlay(this.src)">  
                 </div>
             </div>
         </section>
@@ -151,13 +79,18 @@
             <div class="portfolio-container">
                 <div class="portfolio">
                     <img src="photos/SpikedHarness2.jpg" alt="Custom Leather Work" onclick="openOverlay(this.src)">
+                    <img src="photos/headbandWithBow.png" alt="Custom Leather Work" onclick="openOverlay(this.src)">
+                    <img src="photos/PurseFront.png" alt="Custom Leather Work" onclick="openOverlay(this.src)">
+                    <img src="photos/PurseBack.png" alt="Custom Leather Work" onclick="openOverlay(this.src)">
+                    <img src="photos/CorsetChain.png" alt="Custom Leather Work" onclick="openOverlay(this.src)">
+                    <img src="photos/ChainRibHarness.png" alt="Custom Leather Work" onclick="openOverlay(this.src)">
                 </div>
             </div>
         </section>
-    </main>
+    </div></div></center>
 
-    <div id="overlay" onclick="closeOverlay()">
-        <img id="overlay-img" alt="Expanded Product View">
+    <div id="overlay" class="overlay" onclick="closeOverlay()">
+        <img id="overlay-img" src="" alt="Expanded View">
     </div>
 </body>
 </html>
