@@ -6,6 +6,8 @@
     <title>Rivet Riot - Handcrafted Leather Goods</title>
     <link rel="stylesheet" href="styles.css">
     <script src="photoOverlay.js"></script>
+    <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="ZEEEKMS23PR5A"></script>
+
 </head>
 
 <body>
@@ -16,6 +18,12 @@
     <center>
     <div class="box-container">
         <div class="box">
+            <div align="right">
+                <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+                <script>
+                cartPaypal.Cart({ id: "pp-view-cart" })
+                </script>
+            </div>
         <h1>Leather Products</h1>
         <p>
             Every piece is handcrafted from high-quality, 5oz leather, carefully measured, cut, and hand-dyed to ensure durability and a unique finish. Each item is finished with bee's wax for added protection, enhancing both longevity and character. Sturdy hardware is securely added, creating pieces designed for long-lasting wear. Whether you're choosing from existing designs or customizing your own, every product is crafted with attention to detail and built to endure.
