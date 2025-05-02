@@ -6,20 +6,24 @@
     <title>Rivet Riot - Handcrafted Leather Goods</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="../photoOverlay.js"></script>
-    <script 
-        src="https://www.paypal.com/sdk/js?client-id=BAAQLZJKWYLKQhRLPUV7sTyzpsrnzgysFVO9ge-wLbJ8t4DtPX1sN7yNv6gQTkQGa3XgLQQrC-znn7-vN0&components=hosted-buttons&enable-funding=venmo&currency=USD">
-    </script>
+    <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="ZEEEKMS23PR5A"></script>
 </head>
 
 <body>
     <header>
-        <a href="./index.html"><img src="../photos/RivetRiot_transparent.png" alt="Rivet Riot Logo"></a>
+        <a href="../index.html"><img src="../photos/RivetRiot_transparent.png" alt="Rivet Riot Logo"></a>
     </header>
 
     <center>
     <div class="box-container">
         <div class="box">
-            <h1>Leather Products</h1>
+            <div align="right">
+                <paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+                <script>
+                cartPaypal.Cart({ id: "pp-view-cart" })
+                </script>
+            </div>
+            <a class="fancya" href="../products.html" Style="margin-top: 25px;">Leather Products</a>
             <p>
                 Every piece is handcrafted from high-quality, 5oz leather, carefully measured, cut, and hand-dyed to ensure durability and a unique finish. Each item is finished with bee's wax for added protection, enhancing both longevity and character. Sturdy hardware is securely added, creating pieces designed for long-lasting wear. Whether you're choosing from existing designs or customizing your own, every product is crafted with attention to detail and built to endure.
             </p>
@@ -36,7 +40,12 @@
                     <img src="../photos/IndividualCuff1.png" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
                 </div>
             </div>
-            <center><div id="paypal-container-UNQ8K6WA6ZEQU" style="width:350px">Checkout loading</div></center>
+            <div style="margin-left: 25px;">
+                <paypal-add-to-cart-button data-id="WTNYRSZXY6222" ></paypal-add-to-cart-button>
+            </div>
+                <script>
+                  cartPaypal.AddToCart({ id: "WTNYRSZXY6222" })
+                </script>
         </section>
 
         
