@@ -6,6 +6,9 @@
     <title>Rivet Riot - Handcrafted Leather Goods</title>
     <link rel="stylesheet" href="styles.css">
     <script src="photoOverlay.js"></script>
+    <script 
+        src="https://www.paypal.com/sdk/js?client-id=BAAQLZJKWYLKQhRLPUV7sTyzpsrnzgysFVO9ge-wLbJ8t4DtPX1sN7yNv6gQTkQGa3XgLQQrC-znn7-vN0&components=hosted-buttons&enable-funding=venmo&currency=USD">
+    </script>
 </head>
 
 <body>
@@ -38,7 +41,7 @@
                     <img src="photos/IndividualCuff1.png" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
                 </div>
             </div>
-            <a class="fancya" href="./Products/cuff.html">Buy Now</a>
+            <div id="paypal-container-UNQ8K6WA6ZEQU">Meow</div>
         </section>
 
         <section id="chokers" class="content">
@@ -97,4 +100,9 @@
         <img id="overlay-img" src="" alt="Expanded View">
     </div>
 </body>
+<script>
+    paypal.HostedButtons({
+        hostedButtonId: "UNQ8K6WA6ZEQU",
+    }).render("#paypal-container-UNQ8K6WA6ZEQU")
+    </script>
 </html>

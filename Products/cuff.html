@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivet Riot - Handcrafted Leather Goods</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../photoOverlay.js"></script>
+    <script 
+        src="https://www.paypal.com/sdk/js?client-id=BAAQLZJKWYLKQhRLPUV7sTyzpsrnzgysFVO9ge-wLbJ8t4DtPX1sN7yNv6gQTkQGa3XgLQQrC-znn7-vN0&components=hosted-buttons&enable-funding=venmo&currency=USD">
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><img src="../photos/RivetRiot_transparent.png" alt="Rivet Riot Logo"></a>
+    </header>
+
+    <center>
+    <div class="box-container">
+        <div class="box">
+            <h1>Leather Products</h1>
+            <p>
+                Every piece is handcrafted from high-quality, 5oz leather, carefully measured, cut, and hand-dyed to ensure durability and a unique finish. Each item is finished with bee's wax for added protection, enhancing both longevity and character. Sturdy hardware is securely added, creating pieces designed for long-lasting wear. Whether you're choosing from existing designs or customizing your own, every product is crafted with attention to detail and built to endure.
+            </p>
+            <h2>Custom Cuffs</h2>
+            <p>
+                Our leather cuffs are designed for both comfort and strength. Each one is shaped for a perfect fit, with customization available to match your style or specifications. Small (3/4") cuffs start at $17, while larger styles (1-1/4") are priced at $30. Custom sizes can be made upon request. Finished with durable hardware and sealed for protection, these cuffs are built to stand up to daily wear and last a lifetime with proper care.
+            </p>
+            <div class="portfolio-container">
+                <div class="portfolio">
+                    <img src="../photos/CuffsOnLog1.jpg" alt="Leather Cuffs" onclick="openOverlay(this.src)">
+                    <img src="../photos/CuffsOnLog2.jpg" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
+                    <img src="../photos/cuffPile.png" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
+                    <img src="../photos/2tierCuff.png" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
+                    <img src="../photos/IndividualCuff1.png" alt="Leather Cuffs Close-up" onclick="openOverlay(this.src)">
+                </div>
+            </div>
+            <center><div id="paypal-container-UNQ8K6WA6ZEQU" style="width:350px">Checkout loading</div></center>
+        </section>
+
+        
+</body>
+<script>
+    paypal.HostedButtons({
+        hostedButtonId: "UNQ8K6WA6ZEQU",
+    }).render("#paypal-container-UNQ8K6WA6ZEQU")
+    </script>
+</html>
